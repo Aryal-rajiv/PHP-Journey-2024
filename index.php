@@ -3,7 +3,7 @@
           <title>Practice page</title>
 </head>
 <body>
-   <h1>I am doing the famous Restart move</h1>
+   <center><h1>I am doing the famous Restart move</h1></center>
 
    <?php
    echo "Hello Nepal";//Instead of writing hello world i am breaking steriotype
@@ -38,7 +38,63 @@
    test();
    echo $y;
 
-   echo "Raskhya and dikshya";
+     function cout(){
+        static $a = 1;
+        echo $a;
+        $a++;
+
+     }
+     cout();
+     cout();
+     cout();
+
+
+   ?>
+   <br><br><br>
+   <?php
+           
+      $b = "Hello This is another layer for practice";
+      echo $b;
+
+
+    Print "<br><center><h2>Lets start a new chapter</h2></center>";
+    $txt = "<br> So basically i am showing how print keyword can be used";
+    $b = 5;
+    print "I can basically show" .$txt. "la garo xa <br>";
+    var_dump('$b'); // gives the datatype and value
+
+    //Double and single quotes
+echo ("<br><center><h3>This section kis all anout string concatination </h3></center><br>");
+  $c = "Hello";
+  $d = "Rajiv";
+  $z= $c.$d;
+  echo $z;
+  $z = "<br>".$c." ".$d;
+  echo $z;
+  $z = "<br> $c $d";
+  echo $z;
+   
+  echo ("<br><center><h3>PHP slicing strings</h3></center><br>");
+
+$x = "Hello its me Rajiv";
+echo("<br>");
+echo substr($x,8,5);//From index 8 to 5 position forward
+echo("<br>");
+echo substr($x,5);//From index 6 5 t end
+echo substr($x,-5);
+echo substr($x,6,-2);
+
+
+
+
+
+
+
+
+
+
+
+
 
    ?>
 
