@@ -3,7 +3,9 @@
           <title>Practice page</title>
 </head>
 <body>
-   <center><h1>I am doing the famous Restart move</h1></center>
+   <div style{ boarder:1px; margin-left:30px;}
+<center>
+   <h1>I am doing the famous Restart move</h1></center>
 
    <?php
    echo "Hello Nepal";//Instead of writing hello world i am breaking steriotype
@@ -84,6 +86,58 @@ echo substr($x,5);//From index 6 5 t end
 echo substr($x,-5);
 echo substr($x,6,-2);
 
+echo("<center> <h1>Let's learn PHP type casting </h1></center>");
+
+   $a=5.4;
+   $b=5;
+   $c="51";
+   $d="true";
+   $e= NULL;
+
+   var_dump($a);
+   var_dump($b);
+   var_dump($c);
+   var_dump($d);
+   var_dump($e);
+
+   $a = (string)$a;
+   $b = (string)$b;
+   $c = (float)$c;
+   $d = (bool)$d;
+   $e = (bool)$e;  
+
+
+   var_dump($a);
+   var_dump($b);
+   var_dump($c);
+   var_dump($d);
+   var_dump($e);
+
+$a = (int)$a;
+$b = (int)$b;
+$c = (bool)$c;
+$d = (array)$d;
+$e = (array)$e; 
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+echo ("<center><h1>Let's learn about PHP Math Function</h1></center>");
+echo Pi();
+echo("<br>");
+$a = 5.55;
+$b= -525;
+echo("<br>");;
+echo abs($a);
+echo min(6,12);
+echo("br");
+echo max(17,25);
+echo sqrt(55);
+echo Round($b);
+echo Rand();
+echo Rand(10,1000); 
 
 
 
@@ -97,6 +151,16 @@ echo substr($x,6,-2);
 
 
    ?>
+ <center><h1>Lets learn about PHP form Handling</h1>
+   <br><br>
+<form action="action.php"method = "post">
+   Name: <input type="text" name="Name"><br>
+   <br>
+   Email: <input type="text" name="email"><br>
+   <br>
+   <input type="submit">
+   </form></center>
+
 
 </body>
 
