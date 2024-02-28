@@ -153,13 +153,19 @@ echo Rand(10,1000);
    ?>
  <center><h1>Lets learn about PHP form Handling</h1>
    <br><br>
-<form action="action.php"method = "post">
-   Name: <input type="text" name="Name"><br>
-   <br>
-   Email: <input type="text" name="email"><br>
-   <br>
-   <input type="submit">
-   </form></center>
+
+   <center><form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+ <!-- The $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
+-->   
+   Name: <input type="text" name="Full Name"><br><br>
+   Email: <input type="text" name="Email"><br><br>
+   Comment: <textarea name="comment" rows="3" cols="20"> </textarea><br>
+   Gender:<br>
+     <input type="radio" name="gender" value="male">Male <br><br>
+     <input type="radio" name="gender" value="female">Female <br><br>
+     <input type="radio" name="gender" value="others">Others <br><br>
+
+</form></center>
 
 
 </body>
