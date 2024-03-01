@@ -156,6 +156,7 @@ echo Rand(10,1000);
 
    <center><form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
  <!-- The $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
+ But $_SERVER["PHP_Self"]) can be exploited
 -->   
    Name: <input type="text" name="Full Name"><br><br>
    Email: <input type="text" name="Email"><br><br>
@@ -166,7 +167,9 @@ echo Rand(10,1000);
      <input type="radio" name="gender" value="others">Others <br><br>
 
 </form></center>
-
+<?php
+  //$_SERVER["PHP_SELF"] exploits can be avoided by using the htmlspecialchars() function.
+?>
 
 </body>
 
