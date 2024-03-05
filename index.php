@@ -4,24 +4,24 @@
 </head>
 <body>
    <div style{ boarder:1px; margin-left:30px;}
-<center>
-   <h1>I am doing the famous Restart move</h1></center>
+    <center>
+     <h1>I am doing the famous Restart move</h1></center>
 
-   <?php
+     <?php
    echo "Hello Nepal";//Instead of writing hello world i am breaking steriotype
    //this is single line comment
-   #this is single line comment too
-   /* this is a multiple line comment
-   if i don't give the ending symbol at end , whole code after this will be comment */
+      #this is single line comment too
+       /* this is a multiple line comment
+        if i don't give the ending symbol at end , whole code after this will be comment */
 
-   echo "I am animal lover" ; /*cmment in betwen */echo "but i love dogs the most";
-   $x = 10;
-   $y = 5;
-   echo $x + $y;
-   echo $x - $y;
+        echo "I am animal lover" ; /*cmment in betwen */echo "but i love dogs the most";
+        $x = 10;
+        $y = 5;
+        echo $x + $y;
+        echo $x - $y;
 
-   $tx = "they call me Rajiv but you can call me Mine ";
-   echo "I got a pickup line : $tx";
+        $tx = "they call me Rajiv but you can call me Mine ";
+        echo "I got a pickup line : $tx";
 
    ?>
    <br><br>
@@ -31,10 +31,10 @@
        echo "The datatype and value of x is: ";
        var_dump($x);
   
-   function test(){
+       function test(){
     
-    global $x, $y;
-    $y = $x + $y;
+       global $x, $y;
+       $y = $x + $y;
    }
     
    test();
@@ -158,19 +158,40 @@ echo Rand(10,1000);
  <!-- The $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
  But $_SERVER["PHP_Self"]) can be exploited
 -->   
-   Name: <input type="text" name="Full Name"><br><br>
-   Email: <input type="text" name="Email"><br><br>
-   Comment: <textarea name="comment" rows="3" cols="20"> </textarea><br>
+    Name: <input type="text" name="Full Name">
+    <span class="error">* <?php echo $nameErr;?></span><br><br>
+
+    Email: <input type="text" name="Email">
+    <span class="error" >* <?php echo $emailErr;?></span> <br><br>
+    Comment: <textarea name="comment" rows="3" cols="20"> </textarea>
+    <span class="error">* <?php echo $commentErr;?> </span>
+    <br>
    Gender:<br>
      <input type="radio" name="gender" value="male">Male <br><br>
      <input type="radio" name="gender" value="female">Female <br><br>
-     <input type="radio" name="gender" value="others">Others <br><br>
+     <input type="radio" name="gender" value="others">Others 
+     <span class="error">* <?php echo $GenderErr;?> </span>
+     <br><br>
+
 
 </form></center>
 <?php
   //$_SERVER["PHP_SELF"] exploits can be avoided by using the htmlspecialchars() function.
+  /* In the Javasacript code we have added some new variables: $nameErr, $emailErr, $genderErr, and $websiteErr.
+   These error variables will hold error messages for the required fields. 
+   We have also added an if else statement for each $_POST variable.
+   This checks if the $_POST variable is empty (with the PHP empty() function).
+   If it is empty, an error message is stored in the different error variables, and if it is not empty,
+    it sends the user input data through the test_input() function: */
 ?>
 
 </body>
+<script> 
+// define variables and set to empty values
+$name = $email = $comment = $gender ="";
+$nameErr = $emailErr = $commentErr = $genderErr ="";
+
+
+</script>
 
 </html>
