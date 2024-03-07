@@ -154,7 +154,7 @@ echo Rand(10,1000);
  <center><h1>Lets learn about PHP form Handling</h1>
    <br><br>
 
-   <center><form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   <center><form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
  <!-- The $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
  But $_SERVER["PHP_Self"]) can be exploited
 -->   
@@ -190,7 +190,35 @@ echo Rand(10,1000);
 // define variables and set to empty values
 $name = $email = $comment = $gender ="";
 $nameErr = $emailErr = $commentErr = $genderErr ="";
+if ($_Server["REQUEST_METHOD"]=="POST"){
+ 
+  $if ($_empty($_POST["name"])){
+    $nameERR = "Name is rquired";
+}
+else
+{
+  $name = (Test_input($_POST["name"]));
+}
+ if ($_empty($_POST["email"])){
+  $emailErr = "Email is required";
+ }
+ else{
+  $emailErr = (Test_input($_POST["email"]));
+ }
+ if ($_empty($_POST["comment"])){
+  $commentErr = "Comment is required";
+ }
+ else{
+  $commentErr = (Test_input($_POST["comment"]));
+ }
+ if ($_empty($_POST["gender"])){
+  $genderErr = "Gender is required";
+ }
+ else{
+  $genderErr = (Test_input($_POST["gender"]));
+ }
 
+}
 
 </script>
 
