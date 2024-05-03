@@ -221,5 +221,20 @@ else
 }
 
 </script>
+//PHP to keep the value in Form
+//To show the values in the input fields after the user hits the submit button, we add a little PHP script inside the value attribute
+//we also need to show which radio button that was checked. For this, we must manipulate the checked attribute (not the value attribute for radio buttons
+Name: <input type="text" name="name" value="<?php echo $name; ?>">
+Email: <input type="text" name="email" value="<?php echo $email; ?>">
+Website: <input type="text" name="website" value="<?php echo $website; ?>">
+Comment: <textarea name="comment" rows="5" cols="40" > value="<?php echo $comment; ?>";
+
+Gender:
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="other") echo "other";?> value="other">Other
 
 </html>
