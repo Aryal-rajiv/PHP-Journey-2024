@@ -237,4 +237,15 @@ Gender:
 <input type="radio" name="gender"
 <?php if (isset($gender) && $gender=="other") echo "other";?> value="other">Other
 
+<H5>Advance PHP</H5>
+<?php 
+echo("Lets start adavance php");
+echo("Php Date & Time");
+echo("m Y m l");
+var a = date("Y/m/d");
+echo a;
+echo ("Today is ". date("m/d/Y/l").<br>);
+
+?>
+
 </html>
