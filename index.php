@@ -241,10 +241,25 @@ Gender:
 <?php 
 echo("Lets start adavance php");
 echo("Php Date & Time");
-echo("m Y m l");
+echo("Y m Y l");
 var a = date("Y/m/d");
 echo a;
 echo ("Today is ". date("m/d/Y/l").<br>);
+&copy; 2010-<?php echo date("Y");?>
+//Get a Time
+/*H - 24-hour format of an hour (00 to 23)
+h - 12-hour format of an hour with leading zeros (01 to 12)
+i - Minutes with leading zeros (00 to 59)
+s - Seconds with leading zeros (00 to 59)
+a - Lowercase Ante meridiem and Post meridiem (am or pm)*/
+
+echo "The time is " . date("h:i:sa");
+date_default_timezone_set("America/New_York");
+echo "The time is " . date("h:i:sa");
+
+//Create date with mktime()
+//mktime(hour,munute,second,month,day,year)
+//create a date from string using strtotime()
 
 ?>
 
